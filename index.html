@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/jquery-ui.js" type="text/javascript"></script>
+<script src="js/bodymovin.js"></script>
+<script src="js/tween-max.min.js"></script>
+<script src="js/master.js" type="text/javascript"></script>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+
+	<div class="container">
+		<div id="header">
+		</div>
+		
+			<div class="middle-part">
+				<div id="toolbar" class="red-div">
+				</div>
+				<div id="vertical-tab" class="red-div">
+					<div id="sliding-menu">
+						<div id="character" class="sliding-menus" tabindex="-1">
+							<img id="a" data-name="a" data-type="animation" data-path="anims/a.json" class="char-img" src="img/01.png" width="125" height="243.75" draggable="true" ondragstart="draged(event)" alt="">
+							<img id="b" data-name="b" data-type="animation" data-path="anims/b.json" class="char-img" src="img/02.png" width="125" height="243.75" draggable="true" ondragstart="draged(event)" alt="">
+							<img id="c" data-name="c" data-type="animation" data-path="anims/c.json" class="char-img" src="img/03.png" width="125" height="243.75" draggable="true" ondragstart="draged(event)" alt="">
+						</div>
+						<div id="background" class="sliding-menus" tabindex="-1">
+							<img id="bg01" data-name="bg01" data-type="background" data-path="anims/bg01.json" class="bg-img" src="img/bg01.jpg" width="200" height="112" draggable="true" ondragstart="draged(event)" alt="">
+							<img id="bg02" data-name="bg02" data-type="background" data-path="anims/bg02.json" class="bg-img" src="img/bg02.jpg" width="200" height="112" draggable="true" ondragstart="draged(event)" alt="">
+							<img id="bg03" data-name="bg03" data-type="background" data-path="anims/bg03.json" class="bg-img" src="img/bg03.jpg" width="200" height="112" draggable="true" ondragstart="draged(event)" alt="">
+							<img id="bg04" data-name="bg04" data-type="background" data-path="anims/bg04.json" class="bg-img" src="img/bg04.jpg" width="200" height="112" draggable="true" ondragstart="draged(event)" alt="">
+							</div>
+						<div id="text" class="sliding-menus" tabindex="-1">
+							<input id="txt-input"></input>
+							<button id="txt-btn">ok</button>
+						</div>
+						<div id="misc" class="sliding-menus" tabindex="-1">
+							<a class="transition" id="fade-in" >fade in</a>
+							<a class="transition" id="fade-out" >fade out</a>
+						</div>
+						<div id="music" class="sliding-menus" tabindex="-1">music</div>
+						<div id="rec" class="sliding-menus" tabindex="-1">rec</div>
+						<div id="import" class="sliding-menus" tabindex="-1">import</div>
+					</div>
+					<div id="tabs">
+						<div id="character" class="tab"><a href="#"><img src="img/icons/char.png"></a></div>
+						<div id="background" class="tab"><a href="#"><img src="img/icons/bg.png"></a></div>
+						<div id="text" class="tab"><a href="#"><img src="img/icons/search.png"></a></div>
+						<div id="misc" class="tab"><a href="#"><img src="img/icons/music.png"></a></div>
+						<div id="music" class="tab"><a href="#"><img src="img/icons/upload.png"></a></div>
+						<div id="rec" class="tab"><a href="#"><img src="img/icons/play.png"></a></div>
+						<div id="import" class="tab"><a href="#"></a></div>
+					</div>
+				</div>
+				<div id="preview" class="red-div" ondrop="drop(event)" ondragover="allowDrop(event)">
+					<div class="anim" id="content" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+					</div>
+						<div id="timeline" class="red-div">
+							<div class="play-btn-div">
+								<a href="" id="play-btn" class="play-btn"></a>
+								</div>
+								<div id="sliderWrapper">
+							<div class="slider" id="slider"></div>
+						</div>
+				</div>
+			</div>
+
+		<div id="footer">
+		</div>
+
+	</div>
+
+	<!-- custom contect menu -->
+	  <nav id="context-menu" class="context-menu">
+	    <ul class="context-menu__items">
+	      <li class="context-menu__item">
+	        <a href="#" class="context-menu__link" data-action="record"></i> Record </a>
+	      </li>
+	      <li class="context-menu__item">
+	        <a href="#" class="context-menu__link" data-action="flip"></i> Flip </a>
+	      </li>
+	      <li class="context-menu__item">
+	        <a href="#" class="context-menu__link" data-action="Delete"></i> Delete </a>
+	      </li>
+	    </ul>
+	  </nav>
+</body>
+</html>
